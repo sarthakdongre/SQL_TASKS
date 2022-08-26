@@ -1,0 +1,27 @@
+1) select ename from emp where ename like '%A';
+
+2) select ename from emp where mgr IS null;
+
+3) select ename,empno,sal from emp where sal between 1200 AND 1400;
+
+4) update emp,dept set sal=(sal+(sal/10))where emp.deptno=dept.deptno and dname='Research'
+
+5) select JOB,AVG(sal) from emp group by JOB;
+
+6)select max(sal),min(sal) from emp;
+
+7) select *from dept where dept not in (select deptno from emp);
+
+8) select ename,sal from emp where JOB='ANALYST' and sal>1200;
+
+
+9)select ename from emp where ename like 'A%' or ename like 'M%' order by ename;
+
+10)select ename,sal from emo where ename IN ('MILLER','SMITH');
+
+11) select ename,12*(sal) from emp where ename='SMITH'
+
+12)select ename,empno,sal from emp where sal not between 1500 AND 2850;
+
+13)select mgr,count(*) from emp,dept d where e.deptno=d.deptno group by e.mgr order by e.mgr asc;
+
