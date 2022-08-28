@@ -1,0 +1,35 @@
+1) select empname from emp where job='MANAGER';
+
+
+2)select ename,sal from emp where sal>1000;
+
+3) select ename,sal from emp where enmae<>'JAMES'
+
+4)select ename from emp where ename like ('S%')
+
+5) select ename from emp where ename like ('%A%')
+
+6)select ename from emp ename like ('___L%')
+
+7)select ename,sal from emp where ename='JONES'
+
+8)SELECT ename, round(sal/12,2) AS 'Monthaly Salary'
+
+9)SELECT ename FROM emp WHERE SALARY = (SELECT AVG(SALARY) FROM emp);
+
+
+11)select distinct(ename) FROM emp INNER JOIN DEPT ON EMP.DEPTNO=DEPT.DEPTNO;
+
+12)SELECT ENAME,SAL FROM EMP where SAL>1500 AND (DEPTNO=10 OR DEPTNO=30);
+
+13)SELECT ENAME,JOB,SAL FROM EMP where (JOB='CLERK' OR JOB='ANALYST') AND (SAL NOT IN (1000,3000,5000));
+
+14)SELECT ENAME,SAL,COMM FROM EMP where COMM > (SAL+((SAL*10)/100));
+
+15)SELECT ENAME FROM EMP where (ENAME LIKE '%L%L') AND (DEPTNO=30 OR MGR=7782);
+ 
+
+17)select * from employee e ORDER BY e.job ASC,e.empno DESC;
+
+18)SELECT  ename, DATEDIFF(YEAR, hire_date, GETDATE()) AS EXPERIENCE, 
+       from emp where ename='MILLER'
