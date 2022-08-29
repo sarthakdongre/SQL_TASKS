@@ -1,0 +1,18 @@
+
+1) select * from books where author like '%er';
+
+
+2)select books.title,books.author,reviews.reviewer_name from books inner join reviews on books.id=reviews.book_id
+
+
+3)SELECT reviews.reviwername,COUNT(reviews.book_id) as more than one book
+FROM books b
+INNER JOIN reviews ON b.id = reviews.book_id
+HAVING book_id > 1
+
+
+4)select name from customer where adress like '%o%';
+
+
+5)Select LOWER(Name) AS LowerName
+FROM employee where salary IS NULL;
